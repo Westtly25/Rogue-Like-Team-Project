@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f84d9e955a2a94e989731ad8d3f063, type: 3}
+  m_Name: Fire Rain AbilitySO 3
+  m_EditorClassIdentifier: 
+  icon: {fileID: 5327950094024008212, guid: bd29a8cb5e4a2b341a6708948b69c0ac, type: 3}
+  title: Rain Of Fire
+  description: Rain Of Fire
+  currentLevel: 0
+  maxLevel: 100
+  range: 0
+  isOpen: 0
+  isNeedTarget: 0
+  cooldown: 2
+  abilityState: 0
+  abilityDamageType: {fileID: 11400000, guid: 4385d722dffd0a240985f0c11a29b6f2, type: 2}
+  abilityOptionSOs:
+  - {fileID: 11400000, guid: e05573c6cea44334b80181fa1bb196dd, type: 2}
+  - {fileID: 11400000, guid: 285ccb52b8ade944a81ea7584bc276ed, type: 2}
+  - {fileID: 11400000, guid: 0bab5ed5727844e4badaed80b74d0303, type: 2}
+  - {fileID: 11400000, guid: 9f285430f5401ec4db3737d8f111439c, type: 2}
+  - {fileID: 11400000, guid: b432a046f6ddce6479cd65ed18e03ce9, type: 2}
+  parent: {fileID: 0}
+  abilitiesController: {fileID: 0}
+  rainFireVFX: {fileID: 0}

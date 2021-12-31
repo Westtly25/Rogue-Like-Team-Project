@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b6072978df677b49af84b077c0ad55c, type: 3}
+  m_Name: First Resistance Container
+  m_EditorClassIdentifier: 
+  id: 0
+  resistanceVariables:
+  - damageType: {fileID: 11400000, guid: 8bbc2a53f45202e4f9ea6436fbe359d4, type: 2}
+    isInvulnerable: 0
+    resistancePercentage: 100
+  - damageType: {fileID: 11400000, guid: 4385d722dffd0a240985f0c11a29b6f2, type: 2}
+    isInvulnerable: 0
+    resistancePercentage: 100
+  - damageType: {fileID: 11400000, guid: 6211b5f3c74bc8743918150b47cf19db, type: 2}
+    isInvulnerable: 0
+    resistancePercentage: 100
+  - damageType: {fileID: 11400000, guid: 6211b5f3c74bc8743918150b47cf19db, type: 2}
+    isInvulnerable: 0
+    resistancePercentage: 100

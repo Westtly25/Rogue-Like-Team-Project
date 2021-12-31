@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb2dc98d852fc74eab9431a6a005c93, type: 3}
+  m_Name: Warrior Specialization 2
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 7b8e0222a006d824e930445c7d435ac3, type: 3}
+  title: Arms Specialization
+  description: Arms Specialization
+  abilitySOsList:
+  - {fileID: 11400000, guid: eb8bf1d76d73dd548bb8b48e3ef84093, type: 2}
+  - {fileID: 11400000, guid: 170d1c6d0b933e84f9e5d55b7af24628, type: 2}
+  - {fileID: 11400000, guid: d4cafb1c72676984da5ca0c939c1e76e, type: 2}
+  - {fileID: 11400000, guid: 38587185c9a718f44a5a57a5b8255c10, type: 2}
+  - {fileID: 11400000, guid: 8c4bbbc8e7095f746b05db78c927cac5, type: 2}

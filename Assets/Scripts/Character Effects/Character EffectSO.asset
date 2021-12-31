@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3feff73a075ec44995d4c9e6127a831, type: 3}
+  m_Name: Character EffectSO
+  m_EditorClassIdentifier: 
+  characteristicVariable:
+  - scriptableCharacteristic: {fileID: 11400000, guid: 6695e116a31a2594da9a80d794c443ee, type: 2}
+    characteristicValues: 19000000
+  damageType: {fileID: 11400000, guid: e19aa062604e4fe42a0db7033f46b54e, type: 2}
