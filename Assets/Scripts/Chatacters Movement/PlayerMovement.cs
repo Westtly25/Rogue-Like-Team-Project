@@ -12,6 +12,8 @@ namespace RogueLike.Chatacters_Movement
         private InputAction inputAction;
 
         private float desiredRotationAngle;
+
+        //TODO Вынестив отдельный класс Инпута
         private Camera mainCamera;
 
         [SerializeField] float rotationSpeed = 2f;
@@ -48,7 +50,7 @@ namespace RogueLike.Chatacters_Movement
             inputAction.Enable();
         }
 
-
+        //TODO Вынестив отдельный класс Инпута
         private void SetDirectionByCamera()
         {
             forward = mainCamera.transform.forward;

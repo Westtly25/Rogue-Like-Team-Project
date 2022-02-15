@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using RogueLike.CharactersType;
 
 namespace RogueLike.Characteristics
 {
@@ -15,29 +14,31 @@ namespace RogueLike.Characteristics
         [Header("AVAILABLE CHARACTERISTICS")]
         [SerializeField] private CharacteristicVariable[] characteristicVariable;
 
-        Dictionary<ScriptableCharacteristic, float[]> сharacteristicVariableDictionary;
-
-        public int GetCharacterLevel()
-        {
-            return characterLevel;
-        }
+        private Dictionary<ScriptableCharacteristic, float[]> сharacteristicVariableDictionary;
 
         public void Initialization()
         {
             BuildDictionary();
         }
 
-        public float GetCharacteristicValue(ScriptableCharacteristic characteristic)
+        public void BuildDictionary()
         {
-            float[] levels = сharacteristicVariableDictionary[characteristic];
-
-            if (levels.Length < characterLevel)
+            if(сharacteristicVariableDictionary != null && characteristicVariable == null)
             {
-                return 0;
+                return;
             }
 
-            return levels[characterLevel - 1];
-        }
+            сharacteristicVariableDictionary = new Dictionary<ScriptableCharacteristic, float[]>();
+
+            Dictionary<ScriptableCharacteristic, float[]> templDictionary = new Dictionary<ScriptableCharacteristic, float[]>();
+
+            foreach (CharacteristicVariable item in characteristicVariable)
+            {
+                templDictionary[item.ScriptableCharacteristic] = item.CharacteristicValues;
+            }
+
+            сharacteristicVariableDictionary = templDictionary;
+        }  
 
         public void UpdateCharacteristicValue(ScriptableCharacteristic characteristic, float value)
         {
@@ -97,25 +98,6 @@ namespace RogueLike.Characteristics
             }
 
             levels[level - 1] -= value;
-        }
-
-        public void BuildDictionary()
-        {
-            if(сharacteristicVariableDictionary != null && characteristicVariable == null)
-            {
-                return;
-            }
-
-            сharacteristicVariableDictionary = new Dictionary<ScriptableCharacteristic, float[]>();
-
-            Dictionary<ScriptableCharacteristic, float[]> templDictionary = new Dictionary<ScriptableCharacteristic, float[]>();
-
-            foreach (CharacteristicVariable item in characteristicVariable)
-            {
-                templDictionary[item.ScriptableCharacteristic] = item.CharacteristicValues;
-            }
-
-            сharacteristicVariableDictionary = templDictionary;
-        }       
+        }     
     }
 }

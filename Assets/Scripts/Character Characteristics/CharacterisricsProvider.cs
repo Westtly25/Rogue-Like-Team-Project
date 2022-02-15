@@ -6,7 +6,7 @@ using System;
 
 namespace RogueLike.Characteristics
 {
-    public class CharacterisricsController : MonoBehaviour
+    public class CharacterisricsProvider : MonoBehaviour, ICharacteristicsProvider
     {
         [Header("CHARACTER CHARACTERISTICS")]
         [SerializeField] private ScriptableCharacteristicsContainer characteristicsContainer;
@@ -24,7 +24,7 @@ namespace RogueLike.Characteristics
             }
             #endif
 
-            characteristicsContainer.BuildDictionary();
+            characteristicsContainer.Initialization();
         }
     }
 }

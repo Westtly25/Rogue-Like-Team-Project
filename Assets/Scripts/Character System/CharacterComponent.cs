@@ -6,12 +6,12 @@ using RogueLike.SpecialAbility;
 
 namespace RogueLike.CharacterSystem
 {
-    [RequireComponent(typeof(PlayerMovement), typeof(CharacterisricsController), typeof(AbilitiesController))]
+    [RequireComponent(typeof(PlayerMovement), typeof(CharacterisricsProvider), typeof(AbilitiesController))]
     public class CharacterComponent : MonoBehaviour
     {
         [SerializeField] private CharacterType characterType;
         [SerializeField] private PlayerMovement playerMovement;
-        [SerializeField] private CharacterisricsController characterisricsController;
+        [SerializeField] private CharacterisricsProvider characterisricsController;
         [SerializeField] private AbilitiesController abilitiesController;
 
         private void Awake() => SetComponentsField();
@@ -28,7 +28,7 @@ namespace RogueLike.CharacterSystem
         private void SetComponentsField()
         {
             playerMovement = GetComponent<PlayerMovement>();
-            characterisricsController = GetComponent<CharacterisricsController>();
+            characterisricsController = GetComponent<CharacterisricsProvider>();
             abilitiesController = GetComponent<AbilitiesController>();
         }
     }

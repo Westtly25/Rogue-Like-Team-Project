@@ -1,40 +1,47 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 namespace RogueLike.Combat
 {
     public class TrapDamagePart : MonoBehaviour
     {
-        [SerializeField] private int time = 3;
+        //TODO Вынести параметры ловушки в отдельный класс
+        [SerializeField] private int durationTime = 3;
+        public event Action OnFinished;
+        private Trap trap;
 
-        private IEnumerator enumerator;
-
-        private void OnEnable()
+        public void Initialize(Trap trap)
         {
-            enumerator = Countdown();
+            this.trap = trap;
         }
 
+        private void OnDisable()
+        {
+            trap.OnTrapActivated -= OnTrapActivated;
+        }
+
+        private void Subscribe()
+        {
+            trap.OnTrapActivated += OnTrapActivated;
+        }
+
+        private void OnTrapActivated()
+        {
+            StartCoroutine(Countdown());
+        }
 
         private IEnumerator Countdown()
         {
-            float duration = 3f; 
-
             float normalizedTime = 0;
-            while(normalizedTime <= 1f)
+
+            while(normalizedTime <= durationTime)
             {
-                normalizedTime += Time.deltaTime / duration;
+                normalizedTime += Time.deltaTime / durationTime;
                 yield return null;
             }
-        }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            StartCoroutine(enumerator);
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            StopCoroutine(enumerator);
+            OnFinished?.Invoke();
         }
     }
 }

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using Zenject;
-using RogueLike.Characteristics;
 
 namespace RogueLike.Characteristics
 {
@@ -17,10 +16,14 @@ namespace RogueLike.Characteristics
         [SerializeField] private event Action<float, float> onHealthUpdated;
         #endregion
 
+        #region Cached Components
+        private ICharacteristicsProvider characterisricsProvider;
+        #endregion 
+
         [Inject]
-        public void Construct(CharacterisricsController characterisricsController)
+        public void Construct(CharacterisricsProvider characterisricsController)
         {
-            //characterisricsController.OnCharacteristicsUpdated += 
+            this.characterisricsProvider = characterisricsController;
         }
 
         private void OnEnable()
